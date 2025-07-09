@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: black; /* Changed from aqua */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: white; /* Make all text white */
+}
+
+.game-info {
+  display: flex;
+  margin-bottom: 20px;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game-info p,
+.game-info input,
+.game-info button {
+  margin: 6px 15px;
+  font-size: 18px;
+  color: white; /* Make all game-info text white */
+}
+
+#moneyDisplay {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  background: transparent;
+  color: limegreen; /* Keep the money text bright */
+  pointer-events: none;
+  width: 150px;
+}
+
+#stake {
+  width: 200px;
+  padding: 6px;
+  font-size: 16px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white; /* White underline */
+  color: white; /* Input text color */
+}
+
+#s-stake,
+#cashOut,
+#start {
+  padding: 8px 16px;
+  font-size: 16px;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  background-color: #333; /* Darker buttons */
+}
+
+#cashOut {
+  display: none;
+}
+
+.main {
+  height: 600px;
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 12px;
+  background-color: #1a1a1a; /* Darker grid background */
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.opt {
+  border-radius: 12px;
+  background-color: transparent;
+  border: 1px solid white; /* Light border for visibility */
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-image: url('img/mines69.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.opt:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); /* White glow */
+}
+
+.blur::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  border-radius: 20px;
+}
+
+.blur .opt {
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+#start {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+#totalMoney{
+    color:white;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    background-color:limegreen;
+    padding: 8px;
+    border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); /* White glow */
+
+}#bombCount {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}

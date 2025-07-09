@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mine Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio id="bgMusic" loop>
+  <source src="audio/bg.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+<audio id="gameOverSound">
+  <source src="audio/gameOver.mp3"audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+<audio id="gameStartSound" src="audio/gameStart.mp3"></audio>
+<label for="bombCount">Bombs:</label>
+<select id="bombCount">
+  <option value="2">2 Bombs</option>
+  <option value="3">3 Bombs</option>
+  <option value="4">4 Bombs</option>
+  <option value="5">5 Bombs</option>
+  <option value="6">6 Bombs</option>
+</select>
+
+
+  <p id="totalMoney">Total Money: $1000.00</p>
+
+<div class="game-info">
+  <p id="score">Boxes Opened: 0</p>
+  <input type="text" id="moneyDisplay" value="$1000.00" readonly />
+  <br>
+  <input type="number" id="stake" placeholder="Enter stake amount..." min="0.01" step="0.01" />
+  <button id="s-stake">Stake</button>
+  <button id="cashOut">Cash Out</button>
+  <p id="currentMultiplier">Current Multiplier: -</p>
+  <p id="nextMultiplier">Next Multiplier: -</p>
+  <p id="remainingBoxes">Remaining Boxes: 25</p>
+</div>
+
+<div class="main blur" id="main">
+  <button id="start">Start</button>
+  <!-- 25 boxes -->
+  <div class="opt"></div><div class="opt"></div><div class="opt"></div><div class="opt"></div><div class="opt"></div>
+  <div class="opt"></div><div class="opt"></div><div class="opt"></div><div class="opt"></div><div class="opt"></div>
+  <div class="opt"></div><div class="opt"></div><div class="opt"></div><div class="opt"></div><div class="opt"></div>
+  <div class="opt"></div><div class="opt"></div><div class="opt"></div><div class="opt"></div><div class="opt"></div>
+  <div class="opt"></div><div class="opt"></div><div class="opt"></div><div class="opt"></div><div class="opt"></div>
+</div>
+
+<script src="script.js">
+</script>
+
+</body>
+</html>

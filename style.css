@@ -140,3 +140,54 @@ body {
   border: none;
   border-radius: 4px;
 }
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .game-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #stake {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #moneyDisplay {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .main {
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .opt {
+    aspect-ratio: 1 / 1;
+  }
+
+  #totalMoney {
+    font-size: 1rem;
+    padding: 6px;
+  }
+
+  #s-stake,
+  #cashOut,
+  #start {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  #bombCount {
+    font-size: 14px;
+    padding: 4px;
+  }
+}

@@ -10,8 +10,8 @@
 body {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
     background-color: black;
+overflow: hidden;
 }
 
 nav {
@@ -220,7 +220,6 @@ section {
     font-weight: 700;
     box-shadow: 0 0 40px #0066ff;
 }
-
 @media (max-width: 884px) {
     nav .logo {
         position: absolute;
@@ -230,8 +229,11 @@ section {
     }
 
     .main-container {
-        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
     }
 
     .nav-container .links {
@@ -244,39 +246,55 @@ section {
     }
 
     .main-container .content {
-        width: 80%;
-    }
-
-    .social-links {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem;
-    }
+        width: 90%;
+        }
 
     .main-container .image {
+        width: 60%;
+        height: auto;
+        margin: 20px 0;
         z-index: -1;
-        width: 50%;
-        height: 60%;
+    }
+
+    .social-links i {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+
+    .content button {
+        width: 80%;
+        margin: 20px auto;
     }
 }
 
 @media (max-width: 440px) {
     .main-container .image {
-        width: 50%;
-        height: 60%;
-        margin-bottom: 30px;
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
     }
 
     .main-container .content {
-        width: 80%;
+        width: 95%;
     }
 
-    .main-container button {
-        margin-top: 15px;
+    .content button {
+        width: 90%;
+        font-size: 1rem;
+        margin: 10px auto;
     }
-}
 
-.content h1 span {
-    color: #0066ff;
-    text-shadow: 0 0 10px #0066ff;
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .content .typewriter {
+        font-size: 1.2rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
 }
